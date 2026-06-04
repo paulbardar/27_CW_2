@@ -1,4 +1,5 @@
 #include "MusicCD.h"
+#include<format>
 
 MusicCD::MusicCD(){
     duration = 0;
@@ -24,5 +25,6 @@ void MusicCD::showInfo() const
 {
     cout << "Music CD: " << endl;
     Item::showInfo();
-    cout << "\tDuration: " << duration << endl;
+    //cout << "\tDuration: " << duration << endl;
+    cout << format("\tDuration: {}\n", duration);
 }
